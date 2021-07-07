@@ -8,6 +8,9 @@ Board::Board(std::string filename) {
     read(filename);
     int _ = minesCount;
     while (_ != 0) {
+        //srand(time(0));
+        //mines.push_back(Coords {.x = rand() % size, .y = rand() % size });
+
         if (_ < size)
             mines.push_back(Coords{ .x = _, .y = _ } );
         _--;
