@@ -16,7 +16,7 @@ Board::Board(std::string filename) {
     indexTurn = 0;
 }
 
-bool Board::reveal(std::string text) {
+void Board::reveal(std::string text) {
     Coords cell = Coords::fromString(text);
 
     if (find(hits.begin(), hits.end(), cell) != hits.end()) {
@@ -24,18 +24,12 @@ bool Board::reveal(std::string text) {
     }
 
     if (find(mines.begin(), mines.end(), cell) != mines.end()) {
-        hits.push_back(cell);
-        players[turn()].kill();
-        std::cout<<"killed "<<players[turn()].getName()<<'\n';
-        next();
-        notify();
-        return true;
+        killCurrent();
     }
 
     hits.push_back(cell);
     next();
     notify();
-    return false;
 }
 
 void Board::mark(std::string text) {
@@ -46,6 +40,7 @@ void Board::mark(std::string text) {
     }
 
     markedMines.push_back(cell);
+    markedMinesCount++;
     next();
     notify();
 }
@@ -63,8 +58,10 @@ void Board::read(std::string filename) {
 }
 
 void Board::killCurrent() {
-    players[turn()].kill();
-    std::cout<<"killed "<<players[turn()].getName()<<'\n';
+    players[indexTurn % players.size()].kill();
+    dead++;
+    //next();
+    std::cout<<"killed "<<players[indexTurn % players.size()].getName()<<'\n';
 }
 
 

@@ -38,6 +38,9 @@ private:
 
     int indexTurn;
 
+    int dead = 0;
+    int markedMinesCount = 0;
+
 public:
     explicit Board(std::string filename);
 
@@ -50,7 +53,7 @@ public:
     auto getMarks() { return markedMines; }
     auto getMines() { return mines; }
 
-    bool reveal(std::string cell);
+    void reveal(std::string cell);
     void mark(std::string cell);
     int turn() {
         return indexTurn % players.size();
@@ -66,6 +69,8 @@ public:
     }
 
     void killCurrent();
-    void next() { indexTurn++;
-    std::cout<<"now it's" << players[turn()].getName()<<'\n';}
+    void next() {
+        if (dead == players.size() || markedMinesCount == mines.size()) throw std::runtime_error("done");
+        indexTurn++;
+    }
 };

@@ -45,9 +45,14 @@ void Window::reveal() {
         return;
     }
 
-    if (board->reveal(cell)) {
-        //board->killCurrent();
+    try {
+        board->reveal(cell);
+    } catch (...) {
+        mb->setText("Error");
+        mb->exec();
     }
+
+
 }
 
 void Window::mark() {
@@ -60,14 +65,22 @@ void Window::mark() {
         return;
     }
 
-    board->mark(cell);
+    try {
+        board->mark(cell);
+    } catch (...) {
+        mb->setText("Error");
+        mb->exec();
+    }
 }
 
 void Window::update() {
     model->updateData();
-//    if (!board->getPlayers()[board->getId(player.getName())].getStatus()) {
-//        board->next();
-//    }
+    if (board->getPlayers()[board->getId(player.getName())].getStatus()) {
+        revealButton->setEnabled(false);
+        markButton->setEnabled(false);
+        //board->next();
+        return;
+    }
 
     if (board->turn() != board->getId(player.getName())) {
         revealButton->setEnabled(false);

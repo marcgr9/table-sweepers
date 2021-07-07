@@ -52,6 +52,10 @@ QtGui/qcolor.h
 QtGui/qbrush.h
 -
 
+/Users/marc/Qt/6.1.0/clang_64/lib/QtWidgets.framework/Headers/QApplication
+qapplication.h
+/Users/marc/Qt/6.1.0/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
+
 /Users/marc/Qt/6.1.0/clang_64/lib/QtWidgets.framework/Headers/QHeaderView
 qheaderview.h
 /Users/marc/Qt/6.1.0/clang_64/lib/QtWidgets.framework/Headers/qheaderview.h
@@ -79,6 +83,22 @@ qboxlayout.h
 /Users/marc/Qt/6.1.0/clang_64/lib/QtWidgets.framework/Headers/QWidget
 qwidget.h
 /Users/marc/Qt/6.1.0/clang_64/lib/QtWidgets.framework/Headers/qwidget.h
+
+/Users/marc/Qt/6.1.0/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtCore/qcoreapplication.h
+-
+QtGui/qwindowdefs.h
+-
+QtCore/qpoint.h
+-
+QtCore/qsize.h
+-
+QtGui/qcursor.h
+-
+QtGui/qguiapplication.h
+-
 
 /Users/marc/Qt/6.1.0/clang_64/lib/QtWidgets.framework/Headers/qboxlayout.h
 QtWidgets/qtwidgetsglobal.h
@@ -158,6 +178,36 @@ QtGui/qkeysequence.h
 QtGui/qevent.h
 -
 
+/Users/marc/projects/C++/e3-marcgr9/cmake-build-debug/e3-marcgr9_autogen/FSA3S3MO23/moc_model.cpp
+memory
+-
+../../../ui/model/model.h
+/Users/marc/projects/C++/e3-marcgr9/ui/model/model.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/Users/marc/projects/C++/e3-marcgr9/cmake-build-debug/e3-marcgr9_autogen/UYX5XTB5RZ/moc_window.cpp
+memory
+-
+../../../ui/window.h
+/Users/marc/projects/C++/e3-marcgr9/ui/window.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/Users/marc/projects/C++/e3-marcgr9/cmake-build-debug/e3-marcgr9_autogen/mocs_compilation.cpp
+FSA3S3MO23/moc_model.cpp
+/Users/marc/projects/C++/e3-marcgr9/cmake-build-debug/e3-marcgr9_autogen/FSA3S3MO23/moc_model.cpp
+UYX5XTB5RZ/moc_window.cpp
+/Users/marc/projects/C++/e3-marcgr9/cmake-build-debug/e3-marcgr9_autogen/UYX5XTB5RZ/moc_window.cpp
+
+/Users/marc/projects/C++/e3-marcgr9/controller/board.cpp
+board.h
+/Users/marc/projects/C++/e3-marcgr9/controller/board.h
+
 /Users/marc/projects/C++/e3-marcgr9/controller/board.h
 vector
 -
@@ -178,6 +228,16 @@ string
 iostream
 -
 vector
+-
+
+/Users/marc/projects/C++/e3-marcgr9/main.cpp
+controller/board.h
+/Users/marc/projects/C++/e3-marcgr9/controller/board.h
+ui/window.h
+/Users/marc/projects/C++/e3-marcgr9/ui/window.h
+string
+-
+QApplication
 -
 
 /Users/marc/projects/C++/e3-marcgr9/ui/model/model.h
