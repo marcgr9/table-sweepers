@@ -70,7 +70,11 @@ public:
 
     void killCurrent();
     void next() {
-        if (dead == players.size() || markedMinesCount == mines.size()) throw std::runtime_error("done");
+        if (dead == players.size() || markedMinesCount == mines.size()) {
+            std::cout<<"done";
+            exit(0);
+            throw std::runtime_error("done");
+        }
         indexTurn++;
         while (players[indexTurn % players.size()].getStatus()) indexTurn++;
     }
