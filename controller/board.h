@@ -72,6 +72,6 @@ public:
     void next() {
         if (dead == players.size() || markedMinesCount == mines.size()) throw std::runtime_error("done");
         indexTurn++;
-        while (players[indexTurn].getStatus()) indexTurn++;
+        while (players[indexTurn % players.size()].getStatus()) indexTurn++;
     }
 };
