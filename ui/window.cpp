@@ -75,6 +75,8 @@ void Window::mark() {
 
 void Window::update() {
     model->updateData();
+    std::cout<<board->turn()<<' '<<board->getId(player.getName())<<'\n';
+
     if (board->getPlayers()[board->getId(player.getName())].getStatus()) {
         revealButton->setEnabled(false);
         markButton->setEnabled(false);

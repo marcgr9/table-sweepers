@@ -60,7 +60,6 @@ void Board::read(std::string filename) {
 void Board::killCurrent() {
     players[indexTurn % players.size()].kill();
     dead++;
-    //next();
     std::cout<<"killed "<<players[indexTurn % players.size()].getName()<<'\n';
 }
 
