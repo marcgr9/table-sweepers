@@ -1,3 +1,5 @@
+# Graded 9.9/10
+
 # TableSweepers!
 Create a collaborative implementation of the classical [Minesweeper game](https://www.google.com/search?q=play+minesweeper)! You have to implement the following functionalities:
 1. The program reads the size of the playing field, number of mines and player information from an input file. The included `input.txt` file specifies a playing field of `8 x 8` (the playing area is always square in shape), a number of `10` mines and four players, named `Alice`, `Bob`, `Carol` and `Darryl`. The input file is presumed correct. The mines are laid out randomly within the playing field.
